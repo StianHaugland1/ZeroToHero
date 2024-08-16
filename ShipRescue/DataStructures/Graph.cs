@@ -1,20 +1,21 @@
-using ShipRescue;
+namespace ShipRescue.DataStructures;
 
-public class Graph
+public class Graph<T> where T : notnull
 {
-  public Dictionary<Ship, List<(Ship, double)>> AdjacencyList { get; private set; }
+    public Dictionary<T, List<(T, double)>> AdjacencyList { get; private set; }
 
-  public Graph()
-  {
-    AdjacencyList = new Dictionary<Ship, List<(Ship, double)>>();
-  }
-
-  public void AddEdge(Ship from, Ship to, double weight)
-  {
-    if (!AdjacencyList.ContainsKey(from))
+    public Graph()
     {
-      AdjacencyList[from] = new List<(Ship, double)>();
+        AdjacencyList = new Dictionary<T, List<(T, double)>>();
     }
-    AdjacencyList[from].Add((to, weight));
-  }
+
+    public void AddEdge(T from, T to, double weight)
+    {
+        if (!AdjacencyList.ContainsKey(from))
+        {
+            AdjacencyList[from] = new List<(T, double)>();
+        }
+
+        AdjacencyList[from].Add((to, weight));
+    }
 }

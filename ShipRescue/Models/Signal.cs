@@ -2,7 +2,8 @@ using ShipRescue.Models;
 
 namespace ShipRescue;
 
-public class Signal {
+public class Signal
+{
     public List<Ship> PathFromShipToShore { get; init; }
     public List<Ship> PathFromShoreToShip { get; init; }
     public double Distance { get; init; }
@@ -16,8 +17,8 @@ public class Signal {
 
     public override string ToString()
     {
-      var pathToShore = string.Join(", ", PathFromShipToShore.Select(ship => ship.Id));
-      var pathToShip = string.Join(", ", PathFromShoreToShip.Select(ship => ship.Id));
-      return $"{pathToShore}\n{pathToShip}\n{Distance:F2}";
+        var pathToShore = string.Join(", ", PathFromShipToShore.Select(ship => ship.Id));
+        var pathToShip = string.Join(", ", PathFromShoreToShip.Select(ship => ship.Id));
+        return $"{pathToShore}\n{pathToShip}\n{Distance:F2}";
     }
 }

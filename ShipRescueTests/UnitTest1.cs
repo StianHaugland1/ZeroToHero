@@ -1,5 +1,5 @@
-using ShipRescue;
-using ShipRescue.Helpers;
+using ShipRescue.Enums;
+using ShipRescue.Utilities;
 using ShipRescue.Models;
 
 namespace ShipRescueTests;
@@ -17,24 +17,24 @@ public class ShipParserTests
 
     private readonly Dictionary<string, Ship> _shipsDict = new Dictionary<string, Ship>
     {
-        { "AAA", new Ship { Id = "AAA", Position = new Position(0, -5), RadioRange = 90, Type = Ship.ShipType.Yacht } },
+        { "AAA", new Ship { Id = "AAA", Position = new Position(0, -5), RadioRange = 90, Type = ShipType.Yacht } },
         {
             "BCA",
             new Ship
             {
-                Id = "BCA", Position = new Position(10, 20), RadioRange = 95, Type = Ship.ShipType.ContainerShip
+                Id = "BCA", Position = new Position(10, 20), RadioRange = 95, Type = ShipType.ContainerShip
             }
         },
         {
             "SAC",
-            new Ship { Id = "SAC", Position = new Position(5, 80), RadioRange = 65, Type = Ship.ShipType.FishingBoat }
+            new Ship { Id = "SAC", Position = new Position(5, 80), RadioRange = 65, Type = ShipType.FishingBoat }
         },
         {
-            "ARH", new Ship { Id = "ARH", Position = new Position(100, 45), RadioRange = 60, Type = Ship.ShipType.Buoy }
+            "ARH", new Ship { Id = "ARH", Position = new Position(100, 45), RadioRange = 60, Type = ShipType.Buoy }
         },
         {
             "XXX",
-            new Ship { Id = "XXX", Position = new Position(150, 70), RadioRange = 180, Type = Ship.ShipType.Shore }
+            new Ship { Id = "XXX", Position = new Position(150, 70), RadioRange = 180, Type = ShipType.Shore }
         }
     };
 

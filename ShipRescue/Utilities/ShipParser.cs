@@ -1,6 +1,7 @@
+using ShipRescue.Enums;
 using ShipRescue.Models;
 
-namespace ShipRescue.Helpers
+namespace ShipRescue.Utilities
 {
     public static class ShipParser
     {
@@ -50,15 +51,15 @@ namespace ShipRescue.Helpers
             return double.Parse(locationParts[2]);
         }
 
-        private static Ship.ShipType ParseShipType(string type)
+        private static ShipType ParseShipType(string type)
         {
             return type switch
             {
-                "Y" => Ship.ShipType.Yacht,
-                "C" => Ship.ShipType.ContainerShip,
-                "F" => Ship.ShipType.FishingBoat,
-                "B" => Ship.ShipType.Buoy,
-                "S" => Ship.ShipType.Shore,
+                "Y" => ShipType.Yacht,
+                "C" => ShipType.ContainerShip,
+                "F" => ShipType.FishingBoat,
+                "B" => ShipType.Buoy,
+                "S" => ShipType.Shore,
                 _ => throw new ArgumentException($"Invalid ship type: {type}")
             };
         }

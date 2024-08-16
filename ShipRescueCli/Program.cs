@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using ShipRescue.Services;
+
 var ships = """
                       AAA_Y: 0,-5,90
                       BCA_C: 10,20,95
