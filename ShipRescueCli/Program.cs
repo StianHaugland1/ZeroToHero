@@ -6,8 +6,9 @@ var ships = """
                       SAC_F: 5,80,65
                       ARH_B: 100,45,60
                       XXX_S: 150,70,180
+                      XXI_S: 1500,70,10
                       """;
 
 var shipRadio = new ShipRadio(ships);
-shipRadio.EstablishChannel();
-Console.WriteLine("Hello, World!");
+var result = shipRadio.EstablishChannel();
+Console.WriteLine(result);

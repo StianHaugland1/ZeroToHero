@@ -35,11 +35,11 @@ public class PathFindingService
     return _graph.AdjacencyList[ship];
   }
 
-  public List<Ship> FindShortestPath(Ship startShip, Ship targetShip)
+  public List<Ship>? FindShortestPath(Ship startShip, Ship targetShip)
    {
             var distances = new Dictionary<Ship, double>();
             var previousShips = new Dictionary<Ship, Ship?>();
-            var priorityQueue = new SortedSet<(double, Ship)>();
+            var priorityQueue = new SortedSet<(double, Ship)>(new TupleComparer());
 
             foreach (var ship in _graph.AdjacencyList.Keys)
             {
@@ -78,6 +78,10 @@ public class PathFindingService
             while (current != null)
             {
                 path.Add(current);
+                if(!previousShips.ContainsKey(current))
+                {
+                    return null;
+                }
                 current = previousShips[current];
             }
 
@@ -85,4 +89,14 @@ public class PathFindingService
             return path;
         }
  
+}
+public class TupleComparer : IComparer<(double, Ship)>
+{
+    public int Compare((double, Ship) x, (double, Ship) y)
+    {
+        int result = x.Item1.CompareTo(y.Item1);
+        if(result != 0) return result;
+
+        return x.Item2.Id.CompareTo(y.Item2.Id);
+    }
 }

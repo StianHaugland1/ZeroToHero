@@ -4,10 +4,10 @@ namespace ShipRescue;
 
 public class Ship : IShip
 {
-    public string Id { get; set; }
-    public Position Position { get; set; }
-    public double RadioRange { get; set; }
-    public ShipType Type { get; set; }
+    public required string Id { get; init; }
+    public required Position Position { get; init; }
+    public double RadioRange { get; init; }
+    public ShipType Type { get; init; }
 
     public double DistanceTo(Ship other)
     {
