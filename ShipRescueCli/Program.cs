@@ -11,6 +11,12 @@ var ships = """
                       XXI_S: 1500,70,10
                       """;
 
+if (Console.IsInputRedirected)
+{
+  string input = Console.In.ReadToEnd();
+  ships = input;
+}
+
 var shipRadio = new ShipRadio(ships);
 var result = shipRadio.EstablishChannel();
 Console.WriteLine(result);

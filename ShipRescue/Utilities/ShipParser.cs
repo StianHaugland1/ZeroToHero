@@ -8,6 +8,7 @@ namespace ShipRescue.Utilities
         public static ICollection<Ship> Parse(string shipsString)
         {
             var ships = new List<Ship>();
+            shipsString = shipsString.Replace("\r", string.Empty);
             var shipLines = shipsString.Split("\n", StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var shipLine in shipLines)
