@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeGame", "MazeGame\MazeGa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipRescue", "ShipRescue\ShipRescue.csproj", "{26F38559-A338-463A-A8DB-5E4F4996C20C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipRescueCli", "ShipRescueCli\ShipRescueCli.csproj", "{22BB8A39-F4FC-4676-B721-06D891EBAE26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShipRescueTests", "ShipRescueTests\ShipRescueTests.csproj", "{96CA68FA-FD8D-4A2B-A77B-D0424F37D6A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{26F38559-A338-463A-A8DB-5E4F4996C20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26F38559-A338-463A-A8DB-5E4F4996C20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26F38559-A338-463A-A8DB-5E4F4996C20C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BB8A39-F4FC-4676-B721-06D891EBAE26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BB8A39-F4FC-4676-B721-06D891EBAE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BB8A39-F4FC-4676-B721-06D891EBAE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BB8A39-F4FC-4676-B721-06D891EBAE26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CA68FA-FD8D-4A2B-A77B-D0424F37D6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CA68FA-FD8D-4A2B-A77B-D0424F37D6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CA68FA-FD8D-4A2B-A77B-D0424F37D6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CA68FA-FD8D-4A2B-A77B-D0424F37D6A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
